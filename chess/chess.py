@@ -1,7 +1,10 @@
 import pygame
 
 from models.board import Board
+from shell.shell import Shell
 from ui.window import show_window, on_event
+
+shell = Shell("../chess_shell")
 
 screen = show_window()
 board = Board(screen)
