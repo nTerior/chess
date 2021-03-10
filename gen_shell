@@ -1,0 +1,13 @@
+#!/bin/bash
+
+echo "Retrieving sources"
+git clone https://github.com/metamuffin/kekchess >/dev/null 2>&1
+cd kekchess
+
+echo "Building the shell from sources"
+cargo build --release
+
+echo "Finishing ... "
+cp target/release/kekchess ../chess_shell
+cd ..
+rm -drf kekchess
